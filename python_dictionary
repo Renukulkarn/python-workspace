@@ -1,0 +1,38 @@
+
+students = {
+    101: {"name": "Renu", "phy": 85, "chem": 90, "math": 95},
+    102: {"name": "Rahul", "phy": 78, "chem": 82, "math": 88},
+    103: {"name": "Priya", "phy": 92, "chem": 89, "math": 96},
+    104: {"name": "Amit", "phy": 67, "chem": 75, "math": 80},
+    105: {"name": "Sneha", "phy": 88, "chem": 94, "math": 91}
+}
+
+max_phy = 0
+max_chem = 0
+max_math = 0
+
+phy_topper = ""
+chem_topper = ""
+math_topper = ""
+
+
+for roll_no, data in students.items():
+
+    if data["phy"] > max_phy:
+        max_phy = data["phy"]
+        phy_topper = data["name"]
+
+    if data["chem"] > max_chem:
+        max_chem = data["chem"]
+        chem_topper = data["name"]
+
+    if data["math"] > max_math:
+        max_math = data["math"]
+        math_topper = data["name"]
+
+
+print(f"Physics Topper: {phy_topper}, Marks: {max_phy}")
+
+print(f"Chemistry Topper: {chem_topper}, Marks: {max_chem}")
+
+print(f"Maths Topper: {math_topper}, Marks: {max_math}")
